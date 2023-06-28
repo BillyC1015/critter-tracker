@@ -1,6 +1,26 @@
 
-<button id="upload_widget" class="cloudinary-button">Upload files</button>
+{{!-- we did this from copying and pasting the password form from login handlebars, it still has a login button, need to 
+be changed and also need to connect it to a submit event for name and description of animals to go on the page when uploaded --}}
+<form class="form animal-form">
+      <div class="form-group">
+        <label for="email-login">name:</label>
+        <input class="form-input" type="text" id="name-animal" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">description:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <button id="upload_widget" class="cloudinary-button">Upload files</button>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
 
+{{#each animals}}
+<h2>{{name}}</h2>
+<h2>{{description}}</h2>
+<img src="{{image_url}}" alt="critter image"></img>
+{{/each}}
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
 
 <script type="text/javascript">  
@@ -11,6 +31,18 @@ var myWidget = cloudinary.createUploadWidget({
     { 
      // create a fetch that gets the uploaded image use result.info.url
       console.log('Done! Here is the image info: ', result.info); 
+      fetch("/api/animals",{
+        method:"POST",
+        body:JSON.stringify({
+        name:"Charizard",
+        description:"Big fire lizard",
+        image_url:result.info.url
+        }),
+        headers:{
+            "Content-Type":"application/json"
+        }
+      })
+      console.log("success!")
     }
   }
 )

@@ -1,13 +1,22 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/maps', (req,res)=>{
   res.render ('maps')
 })
 
-router.get('/upload-pic', (req,res)=>{
-  res.render ('upload-pic')
+router.get('/upload-pic', async (req,res)=>{
+  const animalData = await Animal.findAll({
+    // include user data here-Billy
+  })
+const animals = animalData.map(animal=>animal.get({
+  plain:true
+}))
+console.log(animals)
+  res.render ('upload-pic',{
+    animals
+  })
 })
 
 router.get('/', async (req, res) => {
