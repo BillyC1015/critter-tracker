@@ -8,7 +8,7 @@ be changed and also need to connect it to a submit event for name and descriptio
       </div>
       <div class="form-group">
         <label for="animal-description">Describe Your Critter:</label>
-        <input class="form-input" type="text" id="password-" />
+        <input class="form-input" type="text" id="animal-description" />
       </div>
       <button id="upload_widget" class="cloudinary-button">Upload files</button>
       <div class="form-group">
@@ -28,13 +28,14 @@ var myWidget = cloudinary.createUploadWidget({
   uploadPreset: 'jrs4qnki'}, (error, result) => { 
     if (!error && result && result.event === "success") 
     { 
-    
+    let nameAnimal=document.querySelector("#name-animal")
+    let animalDescription=document.querySelector("#animal-description")
       console.log('Done! Here is the image info: ', result.info); 
       fetch("/api/animals",{
         method:"POST",
         body:JSON.stringify({
-        name:"Charizard",
-        description:"Big fire lizard",
+        name: nameAnimal.value,
+        description:animalDescription.value,
         image_url:result.info.url
         }),
         headers:{
@@ -42,11 +43,13 @@ var myWidget = cloudinary.createUploadWidget({
         }
       })
       console.log("success!")
+      window.location.href="upload-pic"
     }
   }
 )
 
-document.getElementById("upload_widget").addEventListener("click", function(){
+document.getElementById("upload_widget").addEventListener("click", function(e){
+    e.preventDefault()
     myWidget.open();
   }, false);
 </script>
