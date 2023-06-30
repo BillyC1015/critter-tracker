@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      alert("Incorrect Email or Password");
     }
   }
 };
@@ -39,7 +39,8 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      alert("Make sure your email is valid and your password is at least 10 characters.")
+      // alert(response.statusText);
     }
   }
 };
