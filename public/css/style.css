@@ -8,7 +8,7 @@ header, .project:not(:last-child) {
 }
 
 a:link, a:visited {
-  color:aqua;
+  color: #fff;
 }
 
 .no-button {
