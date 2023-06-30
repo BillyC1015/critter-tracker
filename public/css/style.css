@@ -1,5 +1,14 @@
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  background-color: #6aa84fff;
+}
+
+#body {
+  background-color: #FCE5CD;
+}
+
+a:link, a:visited {
+  color: #fff;
 }
 
 .no-button {
