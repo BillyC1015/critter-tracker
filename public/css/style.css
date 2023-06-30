@@ -36,3 +36,26 @@ a:link, a:visited {
   width: 850px;
   height: 500px;
 }
+
+#welcome-div{
+  color:white;
+  font-size: 5opx;
+  text-shadow: 2px 2px;
+  justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+  }
+  
+  .flex-container > div {
+    background-color:#056605;
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-radius: 2%;
+  }
