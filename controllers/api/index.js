@@ -8,4 +8,7 @@ router.use('/users', userRoutes);
 router.use('/projects', projectRoutes);
 router.use('/seedDb', seedDbRoute);
 router.use('/animals', animalRoutes);
+router.use('/map', mapRoute);
+
+
 module.exports = router;
