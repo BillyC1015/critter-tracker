@@ -3,7 +3,10 @@ const { Project, User, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/maps', (req,res)=>{
-  res.render ('maps')
+  MAPQUEST_API_KEY = process.env.MAPQUEST_API_KEY;
+  res.render ('maps', {
+    MAPQUEST_API_KEY
+  })
 })
 
 router.get('/upload-pic', async (req,res)=>{
