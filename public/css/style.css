@@ -37,18 +37,25 @@ a:link, a:visited {
   height: 500px;
 }
 
-#homepage-div 
-  .flex-container {
+#welcome-div{
+  color:white;
+  font-size: 5opx;
+  text-shadow: 2px 2px;
+  justify-content: center;
+}
+
+.flex-container {
     display: flex;
     flex-direction: column;
-    background-color: DodgerBlue;
+    background-color: none;
   }
   
   .flex-container > div {
-    background-color: #f1f1f1;
+    background-color:#056605;
     width: 500px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+    border-radius: 2%;
   }
