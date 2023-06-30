@@ -7,9 +7,9 @@ header, .project:not(:last-child) {
   background-color: #FCE5CD;
 }
 
-/* #a {
-  color: #ccc;
-} */
+a:link, a:visited {
+  color:aqua;
+}
 
 .no-button {
   background: none;
