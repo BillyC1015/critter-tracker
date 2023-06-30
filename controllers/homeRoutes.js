@@ -9,7 +9,9 @@ router.get('/maps', (req,res)=>{
   })
 })
 
-router.get('/upload-pic', async (req,res)=>{
+
+router.get('/upload-pic', withAuth, async (req,res)=>{
+
   const animalData = await Animal.findAll({
     // include user data here-Billy
   })
