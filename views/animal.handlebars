@@ -1,3 +1,29 @@
 {{!-- Animal profile made in handlebars
 Allow for it to be linked on the map page.
 Needs to have animal image, description and coordinates. --}}
+<form id="new-animal-form">
+    Animal Name: <br> <input type="text" id="animal-name"><br>
+    Animal Image: <br> <input type="" id="animal-image"><br>
+    Describe the Animal: <br><textarea name="" id="animal-description" cols="30" rows="10"></textarea><br>
+    Coordinates: <br> <input type="text" id="animal-coordinates"><br>
+<button>Submit</button>
+</form>
+
+ {{#if animals.length}}
+  <div class="col-md-6 project-list">
+    <h3>Your Animals:</h3>
+
+    {{#each animals as |animal|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{animal.id}}">{{animal.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{animal.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  <script src="/js/animals.js"></script>
