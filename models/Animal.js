@@ -21,13 +21,18 @@ Animal.init(
     image_url: {
         type: DataTypes.STRING,
     },
-    // user_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    coordinates:{
+        type: DataTypes.STRING,
+
+    },
+
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
