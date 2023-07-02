@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
   try {
     const newAnimal = await Animal.create({
       ...req.body,
-    //   user_id: req.session.user_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newAnimal);
