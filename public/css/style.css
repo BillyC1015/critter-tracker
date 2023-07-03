@@ -42,18 +42,32 @@ a:link, a:visited {
   font-size: 50px;
   text-shadow: 2px 2px;
   justify-content: center;
+  margin: auto;
+  width: 60%;
+  padding: 40px;
+}
+
+#description {
+  color:#056605;
+  font-size: 30px;
+  text-align: center;
 }
 
 .flex-container {
     display: flex;
+    text-align: center;
     flex-direction: column;
     background-color: none;
+    margin: auto;
+    width: 60%;
+    border: 3px solid #464506;
+    padding: 10px;
   }
   
   .flex-container > div {
     background-color:#056605;
     width: 500px;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
