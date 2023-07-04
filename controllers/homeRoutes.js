@@ -22,6 +22,20 @@ console.log(animals)
   })
 })
 
+// the following lines set up a way to get the information of a single animal to put on a card on the map then we can access that info when it is clicked on
+router.get('/animalProfile/:id', async (req,res)=>{
+  const animalData = await Animal.findOne({
+    where:{id: req.params.id}
+  })
+
+const animal = animalData.get({plain: true})
+
+console.log(animal)
+  res.render ('animalProfile',{
+    animal
+  })
+})
+
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
