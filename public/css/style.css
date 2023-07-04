@@ -75,3 +75,8 @@ a:link, a:visited {
     font-size: 30px;
     border-radius: 2%;
   }
+
+  #critter-pic{
+    height: 50px;
+    width: 50px;
+  }
