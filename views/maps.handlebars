@@ -4,11 +4,18 @@
 <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest-core.css"/>
 
 <div id="demo"></div>
-<div id="map"></div>
+<div id="map">
+
+{{#each animals}}
+<a href="/animalProfile/{{id}}">{{name}}</a>
+{{/each}}
+
+
+
+</div>
 <script>
     const MAPQUEST_API_KEY = '{{MAPQUEST_API_KEY}}'
 </script>
 <script src="/js/maps.js"> </script>
 
 {{!-- ex. marker that re-routes to animalProfile based off of the clicked animal's id --}}
-<a href="/animalProfile/{{animals.id}}">{{animals.name}}</a>
