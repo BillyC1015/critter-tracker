@@ -2,10 +2,16 @@ const router = require('express').Router();
 const { Project, User, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/maps', (req,res)=>{
+router.get('/maps', async (req,res)=>{
   MAPQUEST_API_KEY = process.env.MAPQUEST_API_KEY;
+  const animalData = await Animal.findAll({
+    // include user data here-Billy
+  })
+const animals = animalData.map(animal=>animal.get({
+  plain:true
+}))
   res.render ('maps', {
-    MAPQUEST_API_KEY
+    MAPQUEST_API_KEY, animals
   })
 })
 

@@ -22,21 +22,26 @@ function showPosition(position) {
 }
 getLocation()
 
-
+var map;
 function renderMap(latitude, longitude){
 // 'map' refers to a <div> element with the ID map 
-L.mapquest.map('map', {
+map = L.mapquest.map('map', {
   center: [latitude, longitude],
   layers: L.mapquest.tileLayer('map'),
   zoom: 12
-})}
+})
+var marker = L.marker([40.511460, -75.559543]).addTo(map);
+marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
+
+var marker = L.marker([41.511460, -75.559543]).addTo(map);
+marker.bindPopup("<a href='/animalProfile/4'>Bill</a>.").openPopup();
+}
 
 // L.marker([40.511460, -75.559543], {
 //   title: 'You are here',
 // })
 // .addTo(map)
 
-// var marker = L.marker([latitude, longitude]).addTo(map);
-// marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
 
 
