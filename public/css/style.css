@@ -54,7 +54,7 @@ a:link, a:visited {
 }
 
 .flex-container {
-
+    position:absolute; top:350px;
     height: 200px;
     display: flex;
     align-items: center;
