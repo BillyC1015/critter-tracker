@@ -4,6 +4,20 @@
   </div>
 </div>
 
+<form class="form animal-form">
+  <div class="form-group">
+    <label for="animal-name">Critter Name:</label>
+    <input class="form-input" type="text" id="name-animal" />
+  </div>
+  <div class="form-group">
+    <label for="animal-description">Describe Your Critter:</label>
+    <input class="form-input" type="text" id="animal-description" />
+  </div>
+  <button id="upload_widget" class="cloudinary-button">Upload files</button>
+  <div class="form-group">
+  </div>
+</form>
+
 <div class="row mt-4">
   <div class="col-md-6">
     <h3>Check Out Spotted Critters:</h3>
@@ -13,7 +27,46 @@
         <h4>{{animal.name}}</h4>
       </ul>
     </div>
-    
+
+    {{#each animals}}
+    <h2>Name: {{name}}</h2>
+    <h2>Description: {{description}}</h2>
+    <img id="critter-pic" src="{{image_url}}" alt="critter image"></img>
+    {{/each}}
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      var myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dayfbkfpp',
+        uploadPreset: 'jrs4qnki'
+      }, (error, result) => {
+        if (!error && result && result.event === "success") {
+          let nameAnimal = document.querySelector("#name-animal")
+          let animalDescription = document.querySelector("#animal-description")
+          console.log('Done! Here is the image info: ', result.info);
+          fetch("/api/animals", {
+            method: "POST",
+            body: JSON.stringify({
+              name: nameAnimal.value,
+              description: animalDescription.value,
+              image_url: result.info.url
+            }),
+            headers: {
+              "Content-Type": "application/json"
+            }
+          })
+          console.log("success!")
+          window.location.href = "upload-pic"
+        }
+      }
+      )
+
+      document.getElementById("upload_widget").addEventListener("click", function (e) {
+        e.preventDefault()
+        myWidget.open();
+      }, false);
+    </script>
+
 
     {{!-- <form class="form new-project-form">
       <div class="form-group">
