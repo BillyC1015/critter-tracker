@@ -37,10 +37,6 @@ var marker = L.marker([41.511460, -75.559543]).addTo(map);
 marker.bindPopup("<a href='/animalProfile/6'>squirrel</a>.").openPopup();
 }
 
-// L.marker([40.511460, -75.559543], {
-//   title: 'You are here',
-// })
-// .addTo(map)
 
 
 

@@ -21,9 +21,11 @@ Animal.init(
     image_url: {
         type: DataTypes.STRING,
     },
-    coordinates:{
+    latitude:{
         type: DataTypes.STRING,
-
+    },
+    longitude:{
+        type: DataTypes.STRING,
     },
 
     user_id: {
