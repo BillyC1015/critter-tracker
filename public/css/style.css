@@ -108,6 +108,7 @@ a{
 }
 
 .flex-container {
+    position:absolute; top:350px;
     height: 200px;
     display: flex;
     align-items: center;
@@ -125,6 +126,7 @@ a{
     font-size: 30px;
     border-radius: 2%;
 }
+
 
 #critter-pic{
     height: 50px;
