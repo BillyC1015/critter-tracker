@@ -14,13 +14,41 @@
     <input class="form-input" type="text" id="animal-description" />
   </div>
   <button id="upload_widget" class="cloudinary-button">Upload files</button>
-  <div class="form-group">
-  </div>
+  <script>
+  var uploadButton = document.getElementById("upload_widget");
+
+  uploadButton.addEventListener("click", function() {
+    // Code to handle the button click event
+    console.log("Button clicked!");
+
+    // Get user's current location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+
+        // Do something with latitude and longitude values
+        console.log("Latitude: " + latitude);
+        console.log("Longitude: " + longitude);
+      }, function(error) {
+        // Handle error
+        console.log("Error getting location: " + error.message);
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  });
+</script>
+  
+  <div class="form-group"></div>
 </form>
+
+
 
 <div class="row mt-4">
   <div class="col-md-6">
     <h3>Check Out Spotted Critters:</h3>
+
 
     {{#each animals}}
     <h2>Name: {{name}}</h2>
@@ -62,42 +90,6 @@
       }, false);
     </script>
 
-
-    {{!-- <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div> --}}
-
-  {{!-- {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}} --}}
 </div>
 
 <script src="./js/profile.js"></script>
