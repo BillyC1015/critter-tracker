@@ -11,21 +11,43 @@
 
 <body id="body">
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
+    <header>
+      {{!-- <h1>
         <span role="img" aria-label="snail">🐌</span>
-        <a href="/">Critter Tracker</a>
+        <a href="/" class="nav-branding">Critter Tracker</a>
         <span role="img" aria-label="bunny">🐇</span>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
+      </h1> --}}
+      <nav class="navbar">
+        <h1>
+          <span role="img" aria-label="snail">🐌</span>
+          <a href="/" class="nav-branding">Critter Tracker</a>
+          <span role="img" aria-label="bunny">🐇</span>
+        </h1>
+
+{{!-- Conditionally render login or logout links --}}
+      <ul class="nav-menu">
         {{#if logged_in}}
         <a href="/profile">Profile</a> |
         <a href="/maps">🗺️</a> |
         <button class="no-button" id="logout">Logout</button>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Profile</a> |
+        </li>
+        <li class="nav-item">
+          <button class="no-button" id="logout">Logout</button>
+        </li>
+        {{!-- <a href="/animal">Animal</a> | --}}
         {{else}}
-        <a href="/login">Login</a>
+        <li class="nav-item">
+          <a href="/login" class="nav-link">Login</a>
         {{/if}}
+        </li>
+      </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -41,6 +63,33 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="/js/hamburger.js"></script>
 </body>
 
 </html>
+
+<!-- Hamburger menu HTML -->
+{{!-- <body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="nav-branding">Critter Tracker</a>
+        <ul class ="nav-menu">
+          <li class ="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class ="nav-item">
+            <a href="#" class="nav-link">Profile</a>
+          </li>
+          <li class ="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+</body> --}}
+ 
