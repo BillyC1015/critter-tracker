@@ -26,11 +26,11 @@ a:link, a:visited {
   text-decoration: underline;
 }
 
-.dollar-amount {
+/* .dollar-amount {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
-}
+} */
 
 #map {
   width: 850px;
@@ -54,7 +54,7 @@ a:link, a:visited {
 }
 
 .flex-container {
-    position:absolute; top:350px;
+
     height: 200px;
     display: flex;
     align-items: center;
@@ -78,7 +78,6 @@ a:link, a:visited {
   }
 
   #critter-pic{
-    
     height: 50px;
     width: 50px;
   }
