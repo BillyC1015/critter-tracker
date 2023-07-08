@@ -27,12 +27,14 @@
 {{!-- Conditionally render login or logout links --}}
       <ul class="nav-menu">
         {{#if logged_in}}
-        <a href="/profile">Profile</a> |
-        <a href="/maps">🗺️</a> |
-        <button class="no-button" id="logout">Logout</button>
+        {{!-- <a href="/profile">Profile</a> | --}}
         <li class="nav-item">
-          <a href="/profile" class="nav-link">Profile</a> |
-        </li>
+          <a href="/maps" class="nav-link">Map</a>
+        </li> |
+        {{!-- <button class="no-button" id="logout">Logout</button> --}}
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Profile</a>
+        </li> |
         <li class="nav-item">
           <button class="no-button" id="logout">Logout</button>
         </li>
