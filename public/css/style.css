@@ -10,14 +10,19 @@ header{
 
 li{
   list-style: none;
+  margin: 5px;
 }
 
 #body {
   background-color: #FCE5CD;
 }
 
-/* a:link, a:visited {
-  color: #fff;
+a:link, a:visited{
+  color: #ffffff;
+}
+
+/* a:visited {
+  color: rgb(67, 108, 49);
 } */
 
 /* header, .project:not(:last-child) {
@@ -25,10 +30,10 @@ li{
   background-color: #6aa84fff;
 } */
 
-a{
-  color: white;
+/* a{
+  color: #fff;
   text-decoration: none;
-}
+} */
 
 .navbar{
   min-height: 70px;
@@ -42,7 +47,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  /* gap: 60px; */
 }
 
 .nav-branding{
@@ -77,13 +82,13 @@ a{
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #fff;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #065b83;
+  color: dodgerblue;
   text-decoration: underline;
 }
 
@@ -158,7 +163,7 @@ a{
     }
 
     .nav-item{
-      margin: 160px 160;
+      margin: 16px 360px;
     }
 
     .nav-menu.active{
