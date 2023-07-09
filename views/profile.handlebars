@@ -68,6 +68,7 @@
           let nameAnimal = document.querySelector("#name-animal")
           let animalDescription = document.querySelector("#animal-description")
           console.log('Done! Here is the image info: ', result.info);
+         
           fetch("/api/animals", {
             method: "POST",
             body: JSON.stringify({
