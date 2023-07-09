@@ -19,21 +19,14 @@ li{
 
 a:link, a:visited{
   color: #ffffff;
+  text-decoration: none;
 }
-
-/* a:visited {
-  color: rgb(67, 108, 49);
-} */
 
 /* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
   background-color: #6aa84fff;
 } */
 
-/* a{
-  color: #fff;
-  text-decoration: none;
-} */
 
 .navbar{
   min-height: 70px;
@@ -92,6 +85,18 @@ a:link, a:visited{
   text-decoration: underline;
 }
 
+#map-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#demo {
+  order: 0;
+}
+
 #map {
   width: 850px;
   height: 500px;
@@ -132,7 +137,6 @@ a:link, a:visited{
     border-radius: 2%;
 }
 
-
 #critter-pic{
     height: 100px;
     width: 100px;
@@ -152,7 +156,7 @@ a:link, a:visited{
 
 @media(max-width:768px){
     .hamburger{
-      display:block;
+      display: block;
     }
 
     .hamburger.active .bar:nth-child(2){
