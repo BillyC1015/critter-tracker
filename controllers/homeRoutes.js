@@ -38,7 +38,7 @@ router.get('/animalProfile/:id', async (req,res)=>{
 
 const animal = animalData.get({plain: true})
 
-console.log(animal)
+console.log(animalData)
   res.render ('animalProfile',{
     animal
   })
