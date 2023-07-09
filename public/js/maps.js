@@ -30,8 +30,8 @@ map = L.mapquest.map('map', {
   layers: L.mapquest.tileLayer('map'),
   zoom: 12
 })
-var marker = L.marker([40.511460, -75.559543]).addTo(map);
-marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
+// var marker = L.marker([40.511460, -75.559543]).addTo(map);
+// marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
 
 var marker = L.marker([41.511460, -75.559543]).addTo(map);
 marker.bindPopup(`
@@ -39,6 +39,16 @@ marker.bindPopup(`
 <br/>
 <a class="animal-link" href='/animalProfile/4'>cat</a>.
 `).openPopup();
+
+
+var marker = L.marker([39.9526, -75.1652]).addTo(map);
+marker.bindPopup(`
+<a class="animal-link" href='/animalProfile/6'>dog2</a>.
+<br/>
+
+`).openPopup();
+
+
 }
 
 
