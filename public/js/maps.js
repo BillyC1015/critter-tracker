@@ -35,9 +35,9 @@ marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
 
 var marker = L.marker([41.511460, -75.559543]).addTo(map);
 marker.bindPopup(`
-<a href='/animalProfile/5'>dog</a>.
+<a class="animal-link" href='/animalProfile/5'>dog</a>.
 <br/>
-<a href='/animalProfile/4'>cat</a>.
+<a class="animal-link" href='/animalProfile/4'>cat</a>.
 `).openPopup();
 }
 

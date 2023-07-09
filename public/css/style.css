@@ -150,6 +150,18 @@ a:link, a:visited{
     width: 50px;
 }
 
+.animal-link {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  height: 50px;
+  width: 50px;
+}
+
+.animal-link:hover {
+  color: red;
+}
+
 @media(max-width:768px){
     .hamburger{
       display: block;
