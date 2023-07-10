@@ -20,8 +20,8 @@ We used our instructor Anthony Maddatu's example code from I-Know-Tech for help 
 
 ## License
 
-Please refer to license in repo.
----
+Please refer to license in the repo.
+
 
 ## Deployed Application
 [Deployed Application](https://critter-tracker-p2-d4b8f730eb59.herokuapp.com/)
