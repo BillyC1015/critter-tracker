@@ -15,11 +15,7 @@ Users will be able to login the website. Once logged in they will be prompted to
 
 ## Credits
 
-We used our instructor Anthony Maddatu's example code from I-Know-Tech for help with structure and login and logout code.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+We used our instructor Anthony Maddatu's example code from I-Know-Tech for help with structure, login, and logout code.
 
 
 ## License
