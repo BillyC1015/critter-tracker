@@ -21,19 +21,6 @@ a:link, a:visited{
   color: #ffffff;
 }
 
-/* a:visited {
-  color: rgb(67, 108, 49);
-} */
-
-/* header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-  background-color: #6aa84fff;
-} */
-
-/* a{
-  color: #fff;
-  text-decoration: none;
-} */
 
 .navbar{
   min-height: 70px;
