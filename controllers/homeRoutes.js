@@ -2,52 +2,55 @@ const router = require('express').Router();
 const { Project, User, Animal } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/maps', withAuth, async (req,res)=>{
+router.get('/maps', withAuth, async (req, res) => {
   MAPQUEST_API_KEY = process.env.MAPQUEST_API_KEY;
   const animalData = await Animal.findAll({
     // include user data here-Billy
   })
-const animals = animalData.map(animal=>animal.get({
-  plain:true
-}))
-  res.render ('maps', {
-    MAPQUEST_API_KEY, 
+  const animals = animalData.map(animal => animal.get({
+    plain: true
+  }))
+  res.render('maps', {
+    MAPQUEST_API_KEY,
     animals,
     logged_in: req.session.user_id ? true : false
   })
 })
 
-router.get('/upload-pic', withAuth, async (req,res)=>{
+router.get('/upload-pic', withAuth, async (req, res) => {
   const animalData = await Animal.findAll({
   })
-const animals = animalData.map(animal=>animal.get({
-  plain:true
-}))
-console.log(animals)
-  res.render ('upload-pic',{
+  const animals = animalData.map(animal => animal.get({
+    plain: true
+  }))
+  console.log(animals)
+  res.render('upload-pic', {
     animals
   })
 })
 
-// the following lines set up a way to get the information of a single animal to put on a marker on the map then we can access info when it is clicked on
-router.get('/animalProfile/:id', withAuth, async (req,res)=>{
+
+// the following lines set up a way to get the information of a single animal to put on a card on the map then we can access that info when it is clicked on
+router.get('/animalProfile/:id', withAuth, async (req, res) => {
+
   const animalData = await Animal.findOne({
-    where:{id: req.params.id}
+    where: { id: req.params.id }
   })
 
-const animal = animalData.get({plain: true})
+  const animal = animalData.get({ plain: true })
 
-console.log(animalData)
-  res.render ('animalProfile',{
+  console.log(animalData)
+  res.render('animalProfile', {
     animal,
+    ...user,
     logged_in: req.session.user_id ? true : false
   })
 })
 
 router.get('/', async (req, res) => {
-    res.render('homepage', {  
-      logged_in: req.session.logged_in 
-    });
+  res.render('homepage', {
+    logged_in: req.session.logged_in
+  });
 });
 
 // Use withAuth middleware to prevent access to route
