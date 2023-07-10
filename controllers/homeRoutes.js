@@ -19,7 +19,6 @@ const animals = animalData.map(animal=>animal.get({
 
 router.get('/upload-pic', withAuth, async (req,res)=>{
   const animalData = await Animal.findAll({
-    // include user data here-Billy
   })
 const animals = animalData.map(animal=>animal.get({
   plain:true
@@ -30,7 +29,7 @@ console.log(animals)
   })
 })
 
-// the following lines set up a way to get the information of a single animal to put on a card on the map then we can access that info when it is clicked on
+// the following lines set up a way to get the information of a single animal to put on a marker on the map then we can access info when it is clicked on
 router.get('/animalProfile/:id', withAuth, async (req,res)=>{
   const animalData = await Animal.findOne({
     where:{id: req.params.id}

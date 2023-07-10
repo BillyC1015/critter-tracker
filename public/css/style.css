@@ -22,11 +22,6 @@ a:link, a:visited{
   text-decoration: none;
 }
 
-/* header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-  background-color: #6aa84fff;
-} */
-
 
 .navbar{
   min-height: 70px;
