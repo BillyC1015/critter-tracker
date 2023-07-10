@@ -24,6 +24,6 @@ Please refer to license in repo.
 ---
 
 ## Deployed Application
-[Deployed Application]()
+[Deployed Application](https://dashboard.heroku.com/apps/critter-tracker-p2)
 ![Image]()
-<a href="https://github.com/BillyC1015/critter-tracker">Critter Tracker Github link</a>
+[GitHub](https://github.com/BillyC1015/critter-tracker)
