@@ -12,6 +12,7 @@ Overall, this web application provides a user-friendly platform for animal enthu
 
 Users will be able to login the website. Once logged in they will be prompted to provide a name and description of the animal and a link to upload the image they've taken. The image will then be saved on their profile page. Users will be upload existing pictures or use the camera feature to capture images from the application.
 
+![demo-gif](assets/images/CritterTrackerDemo.gif)
 
 ## Credits
 
@@ -27,3 +28,5 @@ Please refer to license in the repo.
 [Deployed Application](https://critter-tracker-p2-d4b8f730eb59.herokuapp.com/)
 
 [GitHub](https://github.com/BillyC1015/critter-tracker)
+
+[Demo Video](https://drive.google.com/file/d/1MYx3EOKWETeiq6Yz9uOZNXJTU4-32xiD/view)
