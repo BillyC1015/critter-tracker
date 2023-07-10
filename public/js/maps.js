@@ -33,19 +33,32 @@ map = L.mapquest.map('map', {
 // var marker = L.marker([40.511460, -75.559543]).addTo(map);
 // marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
 
+var marker = L.marker([40.7128, -74.0060]).addTo(map);
+marker.bindPopup(`
+<a class="animal-link" href='/animalProfile/1'>Blue bird</a>
+<br/>
+`).openPopup();
+
+var marker = L.marker([45.4215, -75.6972]).addTo(map);
+marker.bindPopup(`
+<a class="animal-link" href='/animalProfile/2'>Cardinal</a>
+<br/>
+`).openPopup();
+
+
 var marker = L.marker([41.511460, -75.559543]).addTo(map);
 marker.bindPopup(`
-<a class="animal-link" href='/animalProfile/5'>dog</a>.
+<a class="animal-link" href='/animalProfile/5'>Woodpecker</a>
 <br/>
-<a class="animal-link" href='/animalProfile/4'>cat</a>.
+<a class="animal-link" href='/animalProfile/4'>Robin</a>
 `).openPopup();
 
 
 var marker = L.marker([39.9526, -75.1652]).addTo(map);
 marker.bindPopup(`
-<a class="animal-link" href='/animalProfile/6'>dog2</a>.
+<a class="animal-link" href='/animalProfile/6'>Canary</a>
 <br/>
-
+<a class="animal-link" href='/animalProfile/7'>Eagle</a>
 `).openPopup();
 
 
