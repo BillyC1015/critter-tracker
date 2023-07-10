@@ -16,7 +16,7 @@ Users will be able to login the website. Once logged in they will be prompted to
 
 ## Credits
 
-We used our instructor Anthony Maddatu's example code from I-Know-Tech for help with structure, login, and logout code.
+We used our instructor Anthony Maddatu's example code from I-Know-Tech for help with structure, login, and logout code. Credit to [Miguel Nuñez](https://github.com/sponsors/miguelznunez) for help with creating the mobile friendly hamburger menu thanks to his tutorial [here](https://www.youtube.com/watch?v=flItyHiDm7E)!
 
 
 ## License
