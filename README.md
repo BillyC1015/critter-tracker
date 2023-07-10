@@ -25,4 +25,5 @@ Please refer to license in repo.
 
 ## Deployed Application
 [Deployed Application](https://critter-tracker-p2-d4b8f730eb59.herokuapp.com/)
+
 [GitHub](https://github.com/BillyC1015/critter-tracker)
