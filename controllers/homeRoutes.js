@@ -27,7 +27,7 @@ router.get('/upload-pic', withAuth, async (req, res) => {
   res.render('upload-pic', {
     animals
   })
-})
+});
 
 
 // the following lines set up a way to get the information of a single animal to put on a card on the map then we can access that info when it is clicked on
@@ -38,6 +38,7 @@ router.get('/animalProfile/:id', withAuth, async (req, res) => {
   })
 
   const animal = animalData.get({ plain: true })
+  
 
   console.log(animalData)
   res.render('animalProfile', {
@@ -45,7 +46,7 @@ router.get('/animalProfile/:id', withAuth, async (req, res) => {
     ...user,
     logged_in: req.session.user_id ? true : false
   })
-})
+});
 
 router.get('/', async (req, res) => {
   res.render('homepage', {
