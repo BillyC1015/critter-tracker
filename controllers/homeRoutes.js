@@ -43,7 +43,7 @@ router.get('/animalProfile/:id', withAuth, async (req, res) => {
   console.log(animalData)
   res.render('animalProfile', {
     animal,
-    ...user,
+    ...User,
     logged_in: req.session.user_id ? true : false
   })
 });
