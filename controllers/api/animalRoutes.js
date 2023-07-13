@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { Animal } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
+router.get('/', async (req, res) => {
+  try {
+    const animalData = await Animal.findAll({
+      
+    });
+    res.status(200).json(animalData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', async (req, res) => {
   try {
     const newAnimal = await Animal.create({
