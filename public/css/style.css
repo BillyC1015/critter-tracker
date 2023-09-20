@@ -68,17 +68,17 @@ a:link, a:visited{
   color:#056605;
   font-size: 30px;
   text-align: center;
+  padding-bottom: 1em;
 }
 
 
 .flex-container {
-    position:absolute; top:350px;
-    height: 200px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border: 3px solid #464506;
-    padding: 10px;
+    top: 350px;
+    height: 200px;
 }
 
 .flex-container > div {
@@ -150,38 +150,58 @@ a:link, a:visited{
   background-color: white;
 }
 
-@media(max-width:768px){
-    .hamburger{
-      display: block;
-    }
+@media(max-width:768px) {
+  .hamburger {
+    display: block;
+  }
 
-    .hamburger.active .bar:nth-child(2){
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
-    }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-    .nav-menu{
-      position: fixed;
-      left: -100%;
-      top: 70px;
-      gap: 0;
-      flex-direction: column;
-      background-color: #6aa84fff;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-    }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .nav-item{
-      margin: 16px 0;
-    }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-    .nav-menu.active{
-      left: 0;
-    }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #6aa84fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .navbar {
+    padding: 0 0px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+
+  .squares {
+    display: flex;
+  }
+
 }
