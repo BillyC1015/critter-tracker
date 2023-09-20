@@ -153,6 +153,7 @@ a:link, a:visited{
 @media(max-width:768px) {
   .hamburger {
     display: block;
+    padding-right: 1em;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -202,6 +203,11 @@ a:link, a:visited{
 
   .squares {
     display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    padding-left: 10px;
   }
 
 }
