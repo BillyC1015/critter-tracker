@@ -32,6 +32,22 @@ map = L.mapquest.map('map', {
 })
 // var marker = L.marker([40.511460, -75.559543]).addTo(map);
 // marker.bindPopup("<a href='/animalProfile/1'>Steven</a>.").openPopup();
+function getAnimals(){
+  fetch(`/api/animals`, {
+    method: 'GET',
+    // body: JSON.stringify({ body }),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then(function(response){
+    return response.json()
+  }).then(function(data){
+    console.log(data)
+  })
+  // console.log(response)
+}
+getAnimals();
+
 
 // New York
 var marker = L.marker([40.7128, -74.0060]).addTo(map);
