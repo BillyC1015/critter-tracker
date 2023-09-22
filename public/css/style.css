@@ -40,9 +40,9 @@ a:link, a:visited{
 #map-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* gap: 20px; */
 }
 
 #demo {
@@ -209,5 +209,4 @@ a:link, a:visited{
   h1 {
     padding-left: 10px;
   }
-
 }
